@@ -19,4 +19,11 @@ public class Category {
     private String publisher;
     private Date publishedDate;
     private Date modifiedDate;
+
+    public Category() {
+        this.status = "1";
+        this.publisher = "s.admin";
+        this.publishedDate = new Date();
+        this.modifiedDate = new Date();
+    }
 }
