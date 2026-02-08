@@ -6,6 +6,8 @@ import com.viheakode.backend.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CategoryServiceImp {
 
@@ -17,5 +19,9 @@ public class CategoryServiceImp {
         category.setCategoryName(categoryRequest.getCategoryName());
         category.setDescription(categoryRequest.getDescription());
         return categoryRepository.save(category);
+    }
+
+    public List<Category> getCategories(){
+        return categoryRepository.findAll();
     }
 }
