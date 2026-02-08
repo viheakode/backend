@@ -23,6 +23,7 @@ public class CategoryController {
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Created");
         response.put("data", categoryServiceImp.addCategory(categoryRequest));
+        response.put("success", true);
         response.put("status", 201);
         return ResponseEntity.accepted().body(response);
     }
@@ -32,6 +33,7 @@ public class CategoryController {
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Success");
         response.put("data", categoryServiceImp.getCategories());
+        response.put("success", true);
         response.put("status", 200);
         return ResponseEntity.ok().body(response);
     }
