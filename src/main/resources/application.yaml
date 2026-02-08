@@ -1,3 +1,14 @@
 spring:
   application:
     name: backend
+  datasource:
+    url: jdbc:postgresql://yamanote.proxy.rlwy.net:24492/railway
+    username: postgres
+    password: aFQscKIVgZaPJOjAaRBuPDbdqJFRUOPI
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      format_sql: true
